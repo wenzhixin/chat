@@ -1,0 +1,13 @@
+body {
+	font-size: 14px;
+	padding-top: 60px;
+	font-family: Arial, "微软雅黑";
+	background-color: #efefef;
+}
+
+#users, #room {
+	height: 400px;
+	overflow: auto;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}

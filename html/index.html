@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>在线聊天室</title>
+    <meta name="author" content="zhixin" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">在线聊天室</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="login form-horizontal">
+        <span>请输入你的姓名：</span>
+        <input type="text" id="username" required="required" />
+        <button id="startChat" class="btn">开始聊天</button>
+      </div>
+      <div class="main none">
+        <ul id="users" class="nav nav-list span3"></ul>
+        <div class="span8">
+          <div id="room"></div>
+          <div class="tr form-horizontal mt20">
+            <input id="message" type="text" class="input-xxlarge" required="required" />
+            <button id="sendMessage" class="btn btn-primary ml10">发送</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/socket.io.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
