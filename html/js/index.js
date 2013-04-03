@@ -9,13 +9,17 @@ $(function() {
 		socket.on('users', function(list) {
 			var html = [];
 			$.each(list, function(i, user) {
-				html.push('<li>' + user + '</li>');
+				html.push('<li>',
+							'<a href="javascript:void(0)" data-id="' + user.id + '">',
+								user.username,
+							'</a>',
+						'</li>');
 			});
 			$('#users').html(html.join(''));
 		});
 		socket.on('message', function (data) {
 			var $room = $('#room'),
-				div = '<div>' + data.user + ' : ' + data.info + '</div>';
+				div = '<div>' + data.user.username + ' : ' + data.info + '</div>';
 			if ($room[0].scrollTop + $room.height() >= $room[0].scrollHeight) {
 				$room.append(div);
 				$room.scrollTop($room[0].scrollHeight - $room.height());
